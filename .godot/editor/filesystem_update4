@@ -1,0 +1,10 @@
+res://node_3d.tscn
+res://Node3d.cs
+res://Main.cs
+res://main.tscn
+res://CameraController.cs
+res://Atom.cs
+res://proton.tscn
+res://electron.tscn
+res://neutron.tscn
+res://atom.tscn

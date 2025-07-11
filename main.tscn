@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://spy86ukhauwl"]
+
+[ext_resource type="Script" uid="uid://co8poxte4xjlx" path="res://Main.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dor6mwkf1jb4x" path="res://CameraController.cs" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cv8tt4ocu1a21" path="res://atom.tscn" id="2_h2yge"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_ig7tw")
+AtomScene = ExtResource("2_h2yge")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.496589, 0, 1.35381)
+current = true
+script = ExtResource("2_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.547016, 3.50847)
+light_energy = 5.83

@@ -1,0 +1,17 @@
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\AtoPhy.deps.json
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\AtoPhy.runtimeconfig.json
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\AtoPhy.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\AtoPhy.pdb
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.csproj.AssemblyReference.cache
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.AssemblyInfoInputs.cache
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.AssemblyInfo.cs
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.csproj.CoreCompileInputs.cache
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.csproj.Up2Date
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\refint\AtoPhy.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.pdb
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.genruntimeconfig.cache
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\ref\AtoPhy.dll
