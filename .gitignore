@@ -10,6 +10,8 @@ godot/.godot/
 # Mono (C#) specific
 .mono/
 mono_crash.*
+mono/
+
 
 # Build output
 *.dll
