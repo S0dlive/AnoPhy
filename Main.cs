@@ -19,7 +19,6 @@ public partial class Main : Node3D
 			int nbProtons = rnd.Next(1, 11);
 			int nbNeutrons = nbProtons;          
 			int nbElectrons = nbProtons;          
-			// Chercher le script Atom attaché
 			if (atom is Atom atomScript)
 			{
 				atomScript.NbProtons = nbProtons;
@@ -27,7 +26,7 @@ public partial class Main : Node3D
 				atomScript.NbElectrons = nbElectrons;
 			}
 
-			// Disposer les atomes dans l'espace pour qu'ils ne se superposent pas
+
 			atom.Position = new Vector3(i * 10, 0, 0);
 
 			AddChild(atom);

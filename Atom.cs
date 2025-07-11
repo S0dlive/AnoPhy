@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public partial class Atom : Node3D
 {
-	 [Export] public PackedScene ProtonScene;
+	[Export] public PackedScene ProtonScene;
 	[Export] public PackedScene NeutronScene;
 	[Export] public PackedScene ElectronScene;
 
 	[Export] public int NbProtons = 2;
 	[Export] public int NbNeutrons = 2;
 	[Export] public int NbElectrons = 2;
-
+	
 	private List<Node3D> electrons = new();
 
 	public override void _Ready()
@@ -39,6 +39,71 @@ public partial class Atom : Node3D
 		}
 	}
 
+	public bool IsStable()
+	{
+		int Z = NbProtons;
+		int N = NbNeutrons;
+
+		if (Z == 0) return false;
+
+		float ratio = (float)N / Z;
+
+		if (Z <= 20)
+		{
+			return ratio >= 0.9f && ratio <= 1.15f;
+		}
+		else if (Z <= 40)
+		{
+			return ratio >= 1.1f && ratio <= 1.3f;
+		}
+		else if (Z <= 83)
+		{
+			return ratio >= 1.25f && ratio <= 1.6f;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public void Decay()
+	{
+		if (IsStable())
+		{
+			GD.Print("Atome stable → pas de désintégration.");
+			return;
+		}
+
+		Random rnd = new Random();
+		int type = rnd.Next(0, 3);
+
+		if (type == 0 && NbProtons >= 2 && NbNeutrons >= 2)
+		{
+			NbProtons -= 2;
+			NbNeutrons -= 2;
+			NbElectrons -= 2;
+			GD.Print("Émission alpha (α) : perte de 2 protons et 2 neutrons !");
+		}
+		else if (type == 1 && NbNeutrons > 0)
+		{
+			NbNeutrons -= 1;
+			NbProtons += 1;
+			NbElectrons += 1;
+			GD.Print("Émission beta- (β⁻) : neutron → proton.");
+		}
+		else if (type == 2 && NbProtons > 0)
+		{
+			NbProtons -= 1;
+			NbNeutrons += 1;
+			NbElectrons -= 1;
+			GD.Print("Émission beta+ (β⁺) : proton → neutron.");
+		}
+		else
+		{
+			GD.Print("Aucune désintégration possible.");
+		}
+	}
+	
 	private void GenerateElectrons()
 	{
 		for (int i = 0; i < NbElectrons; i++)
@@ -46,8 +111,7 @@ public partial class Atom : Node3D
 			var electron = ElectronScene.Instantiate<Node3D>();
 			AddChild(electron);
 			electrons.Add(electron);
-
-			// Stocker un angle initial aléatoire
+			
 			electron.SetMeta("angle", GD.RandRange(0, Mathf.Pi * 2));
 			electron.SetMeta("radius", 3.0 + i * 1.0);
 			electron.SetMeta("speed", 1.0 + i * 0.5);
