@@ -1,0 +1,51 @@
+# Godot-specific
+.import/
+.export/
+.export_presets.cfg
+
+# Godot 4 cache (macOS, Linux)
+godot/.mono/
+godot/.godot/
+
+# Mono (C#) specific
+.mono/
+mono_crash.*
+
+# Build output
+*.dll
+*.exe
+*.mdb
+*.pdb
+*.so
+*.dylib
+*.class
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS junk files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# User-specific Godot editor files
+*.godot/tmp/*
+*.godot/editor_settings-*
+
+# Rider / VS Code / VS
+.idea/
+.vscode/
+.vs/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Auto-generated API solution files (optional to ignore)
+GodotSharp.sln
+GodotSharp.csproj
