@@ -1,3 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1752262084
-icon.svg::CompressedTexture2D::8064317098610572423::1752262078::1752262084::1::::<><><>0<>0<>e2cc5621ba14feb5d911f6404fc650cb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://::1752695100
+Atom.cs::CSharpScript::8691300553992443813::1752341734::0::1::::<>Node3D<><>0<>0<><>::
+atom.tscn::PackedScene::6316120647538647040::1752342014::0::1::::<><><>0<>0<><>::uid://dv3epks7um5an::::res://Atom.cs<>uid://da7177fi8s3od::::res://proton.tscn<>uid://bvkfbit17xqiw::::res://neutron.tscn<>uid://chho7o346ce1g::::res://electron.tscn
+CameraController.cs::CSharpScript::8178905111357416957::1752264148::0::1::::<>Camera3D<><>0<>0<><>::
+electron.tscn::PackedScene::5279521880375097898::1752342014::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::8064317098610572423::1752262078::1752262084::1::::<><><>0<>0<>e2cc5621ba14feb5d911f6404fc650cb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Main.cs::CSharpScript::5824546637818541049::1752269822::0::1::::<>Node3D<><>0<>0<><>::
+main.tscn::PackedScene::1295882650404411511::1752342014::0::1::::<><><>0<>0<><>::uid://co8poxte4xjlx::::res://Main.cs<>uid://dor6mwkf1jb4x::::res://CameraController.cs<>uid://cv8tt4ocu1a21::::res://atom.tscn
+neutron.tscn::PackedScene::3881335999153207710::1752342014::0::1::::<><><>0<>0<><>::
+proton.tscn::PackedScene::7226959615305650223::1752342014::0::1::::<><><>0<>0<><>::

@@ -1,9 +1,9 @@
-res://node_3d.tscn
-res://Node3d.cs
-res://Main.cs
-res://main.tscn
-res://CameraController.cs
 res://Atom.cs
+res://Molecule.cs
+res://molecule.tscn
+res://Main.cs
+res://CameraController.cs
+res://main.tscn
 res://proton.tscn
 res://electron.tscn
 res://neutron.tscn

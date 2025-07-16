@@ -15,3 +15,4 @@ C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\refint\AtoPhy.dll
 C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.pdb
 C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.genruntimeconfig.cache
 C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\ref\AtoPhy.dll
+C:\Users\bapti\Documents\atophy\.godot\mono\temp\obj\Debug\AtoPhy.sourcelink.json

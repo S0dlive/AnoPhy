@@ -19,6 +19,101 @@ public partial class Atom : Node3D
 		GenerateNucleus();
 		GenerateElectrons();
 	}
+	
+	public double GetAtomicMass()
+	{
+		double protonMass = 1.0073;
+		double neutronMass = 1.0087;
+		double electronMass = 0.00055;
+
+		return NbProtons * protonMass
+			   + NbNeutrons * neutronMass
+			   + NbElectrons * electronMass;
+	}
+	
+	public int GetValence()
+	{
+		int z = NbProtons;
+
+		if (z == 1) return 1; 
+		if (z == 2) return 0; 
+
+		int electrons = NbElectrons;
+		int valenceElectrons;
+
+		if (electrons <= 2)
+			valenceElectrons = electrons;
+		else
+			valenceElectrons = electrons % 8;
+
+		int needed = (valenceElectrons < 4) 
+			? (4 - valenceElectrons) 
+			: (8 - valenceElectrons);
+
+		return needed;
+	}
+	
+	public bool CanBondWith(Atom other)
+	{
+		return this.GetValence() > 0 
+		       && other.GetValence() > 0
+		       && (this.GetValence() + other.GetValence()) <= 8;
+	}
+	
+	public void TryBondWith(Atom other)
+	{
+		if (CanBondWith(other))
+		{
+			GD.Print($"Nouvelle liaison chimique entre {NbProtons} et {other.NbProtons}"); 
+			var molecule = new Molecule();
+			molecule.AddAtom(this, Vector3.Zero);
+			molecule.AddAtom(other, new Vector3(2, 0, 0));
+
+			GetParent().AddChild(molecule);
+
+			QueueFree();
+			other.QueueFree();
+		}
+		else
+		{
+			GD.Print("Pas de liaison possible.");
+		}
+	}
+	public override void _Input(InputEvent @event)
+	{
+		if (@event.IsActionPressed("mouss_press"))
+		{
+			PrintProperties();
+		}
+	}
+	
+	public int GetCharge()
+	{
+		return NbProtons - NbElectrons;
+	}
+	
+	public void PrintProperties()
+	{
+		int A = GetMassNumber();
+		double mass = GetAtomicMass();
+		int charge = GetCharge();
+
+		GD.Print($"------ Atome sélectionné ------");
+		GD.Print($"Protons (Z) : {NbProtons}");
+		GD.Print($"Neutrons (N) : {NbNeutrons}");
+		GD.Print($"Nombre de masse (A) : {A}");
+		GD.Print($"Electrons : {NbElectrons}");
+		GD.Print($"Charge : {charge} (e)");
+		GD.Print($"Masse atomique ≈ {mass:F4} u");
+		GD.Print($"Stable ? {(IsStable() ? "Oui" : "Non")}");
+		GD.Print($"--------------------------------");
+	}
+	
+	
+	public int GetMassNumber()
+	{
+		return NbProtons + NbNeutrons;
+	}
 
 	private void GenerateNucleus()
 	{

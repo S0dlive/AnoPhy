@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct5j8d6jxncmm"]
+
+[ext_resource type="Script" uid="uid://er8sa7l7o6e8" path="res://Molecule.cs" id="1_qs00y"]
+
+[node name="Molecule" type="Node3D"]
+script = ExtResource("1_qs00y")

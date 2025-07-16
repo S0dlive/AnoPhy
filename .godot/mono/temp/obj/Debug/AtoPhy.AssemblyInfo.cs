@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtoPhy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+011872a8379f1e243e588abb4aecc28cea1505d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtoPhy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtoPhy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
