@@ -45,7 +45,6 @@ public partial class Main : Node3D
                         z * spacing
                     );
 
-                    // Optionnel : légère rotation pour un effet plus réaliste
                     meth.Rotation = new Vector3(
                         GD.Randf() * Mathf.Tau,
                         GD.Randf() * Mathf.Tau,
@@ -80,14 +79,12 @@ public partial class Main : Node3D
     {
         var molecule = MoleculeScene.Instantiate<Molecule>();
 
-        // 10 Carbons
         for (int i = 0; i < 10; i++)
         {
             var carbon = CreateAtom(6, 6, 6);
             molecule.AddAtom(carbon, new Vector3(i * 1.5f, 0, 0));
         }
 
-        // 15 Hydrogens
         for (int i = 0; i < 15; i++)
         {
             var hydrogen = CreateAtom(1, 1, 1);
